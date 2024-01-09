@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import Logo from "@/public/assets/icon.png";
 
 const Header = () => {
   return (
@@ -31,8 +33,8 @@ const Header = () => {
             </div>
             <div className="navbar-start">
               <Link href="/" className="logo text-white text-3xl mt-0">
-                <img
-                  src="/assets/icon.png"
+                <Image
+                  src={Logo}
                   alt="Logo"
                   height={23}
                   width={23}

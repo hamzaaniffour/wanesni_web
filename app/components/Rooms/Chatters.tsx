@@ -121,7 +121,7 @@ const Chatters: React.FC<ChattersProps> = ({ onMessageClick }) => {
                       Patrick Friedman
                     </h4>
                     <div className="text-[13px]">
-                      Yes, you’re right but… · 14 Mar
+                      Yes, you&lsquo;re right but… · 14 Mar
                     </div>
                   </div>
                 </div>
