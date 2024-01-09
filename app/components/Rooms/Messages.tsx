@@ -111,7 +111,7 @@ const Messages: React.FC<MessagesProps> = ({ message }) => {
                 <div className="inline-flex flex-col justify-end">
                   {/* Card */}
                   <div className="inline-block bg-pink-600 rounded-2xl p-4 shadow-sm">
-                    <p className="text-sm text-white">what's preline ui?</p>
+                    <p className="text-sm text-white">what&lsquo;s preline ui?</p>
                   </div>
                   {/* End Card */}
                   <span className="mt-1.5 ms-auto flex items-center gap-x-1 text-xs text-gray-500">
