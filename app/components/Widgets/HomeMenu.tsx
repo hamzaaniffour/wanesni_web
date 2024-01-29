@@ -3,8 +3,8 @@ import React from "react";
 
 const HomeMenu = () => {
   return (
-    <div className="fixed bottom-3 flex justify-center items-center mx-auto xl:block">
-      <ul className="menu bg-white shadow-lg border-2 border-gray-100 menu-horizontal rounded-md w-full flex justify-center items-center">
+    <div className="fixed bottom-0 left-0 flex justify-center items-center mx-auto hidden xl:flex w-[25%]">
+      <ul className="menu bg-white shadow-lg border-2 border-gray-100 menu-horizontal w-full flex justify-center items-center">
         <li>
           <Link href="/account" className="font-bold uppercase text-xs">
             <svg

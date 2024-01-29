@@ -39,13 +39,15 @@ const Conversations = () => {
           </div>
           <div className="lg:w-9/12 xl:block">
             <div className="w-full bg-white overflow-scroll" style={{ height: "100vh" }}>
-              <Messages message={message.message} />
+              <Messages message={{
+                chatter_id: ""
+              }} giftse={[]} />
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`lg:w-3/12 items-center justify-center h-screen ${isMobileChatVisible ? '' : 'hidden'}`} id="sidechat">
+      {/* <div className={`lg:w-3/12 items-center justify-center h-screen ${isMobileChatVisible ? '' : 'hidden'}`} id="sidechat">
         <div className="lg:flex">
           <div className="lg:w-3/12 items-center justify-center h-screen" id="sidechat">
             <div className="w-full h-full flex-col justify-center items-center bg-white p-5 border-r-4 border-gray-200 overflow-scroll">
@@ -58,7 +60,7 @@ const Conversations = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
     </>
   );

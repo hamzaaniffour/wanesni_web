@@ -4,155 +4,68 @@ import React from "react";
 function Options() {
   return (
     <>
-      <div className="grid grid-cols-1">
-        <Link href="/edit">
-          <div className="bg-white rounded-md flex justify-center items-center text-pink-500 py-5 w-full mb-4 font-medium text-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 float-left mr-2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-            </svg> Edit Profile
-          </div>
-        </Link>
-      </div>
       <div className="grid grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-2">
-        <Link href="/">
+        <Link href="/" className="flex flex-col justify-center items-center gap-2">
           <div
-            className="bg-white rounded-md flex flex-col items-center justify-center"
+            className="bg-pink-100 rounded-md flex flex-col items-center justify-center"
             style={{ height: "80px", width: "100px" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-pink-500 mb-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
-              />
-            </svg>
-            <span className="text-xs font-bold text-pink-500">Share APP</span>
+            <svg className="h-8 w-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path style={{fill: '#144F9B'}} d="M183.257,237.344l159.047-76.871c8.426-3.745,12.22-13.611,8.475-22.037s-13.611-12.22-22.037-8.475 l-159.047,76.871c-8.426,3.745-12.22,13.611-8.475,22.037C164.964,237.295,174.83,241.09,183.257,237.344" /> <path style={{fill: '#003F84'}} d="M169.695,305.169l159.047,76.871c8.426,3.745,18.293-0.05,22.037-8.475 c3.745-8.426-0.05-18.293-8.475-22.037l-159.047-76.871c-8.426-3.745-18.293,0.05-22.037,8.475 C157.475,291.557,161.269,301.424,169.695,305.169" /> <path style={{fill: '#32BBFF'}} d="M411.826,300.523c-55.331,0.01-100.164,44.841-100.174,100.174 c0.01,55.331,44.843,100.162,100.174,100.172c55.33-0.01,100.164-44.841,100.174-100.172 C511.99,345.364,467.157,300.533,411.826,300.523z" /> <path style={{fill: '#03A9F4'}} d="M512,400.697c-0.01-55.333-44.843-100.164-100.174-100.174v200.346 C467.157,500.858,511.99,456.027,512,400.697z" /> <path style={{fill: '#32BBFF'}} d="M411.826,11.132c-55.331,0.01-100.164,44.841-100.174,100.174 c0.01,55.331,44.843,100.162,100.174,100.172c55.33-0.01,100.164-44.841,100.174-100.172 C511.99,55.973,467.157,11.142,411.826,11.132z" /> <path style={{fill: '#03A9F4'}} d="M512,111.305c-0.01-55.333-44.843-100.164-100.174-100.174v200.346 C467.157,211.467,511.99,166.636,512,111.305z" /> <path style={{fill: '#32BBFF'}} d="M100.174,155.827C44.843,155.837,0.01,200.668,0,256.001c0.01,55.331,44.843,100.162,100.174,100.172 c55.33-0.01,100.164-44.841,100.174-100.172C200.338,200.668,155.504,155.837,100.174,155.827z" /> <path style={{fill: '#03A9F4'}} d="M200.348,256.001c-0.01-55.333-44.843-100.164-100.174-100.174v200.346 C155.504,356.163,200.338,311.332,200.348,256.001z" /> </g></svg>
           </div>
+          <span className="text-xs font-bold text-white">Share APP</span>
         </Link>
-        <Link href="/">
+        <Link href="/" className="flex flex-col justify-center items-center gap-2">
           <div
-            className="bg-white rounded-md flex flex-col items-center justify-center"
+            className="bg-pink-100 rounded-md flex flex-col items-center justify-center"
             style={{ height: "80px", width: "100px" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-pink-500 mb-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16.712 4.33a9.027 9.027 0 011.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 00-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 010 9.424m-4.138-5.976a3.736 3.736 0 00-.88-1.388 3.737 3.737 0 00-1.388-.88m2.268 2.268a3.765 3.765 0 010 2.528m-2.268-4.796a3.765 3.765 0 00-2.528 0m4.796 4.796c-.181.506-.475.982-.88 1.388a3.736 3.736 0 01-1.388.88m2.268-2.268l4.138 3.448m0 0a9.027 9.027 0 01-1.306 1.652c-.51.51-1.064.944-1.652 1.306m0 0l-3.448-4.138m3.448 4.138a9.014 9.014 0 01-9.424 0m5.976-4.138a3.765 3.765 0 01-2.528 0m0 0a3.736 3.736 0 01-1.388-.88 3.737 3.737 0 01-.88-1.388m2.268 2.268L7.288 19.67m0 0a9.024 9.024 0 01-1.652-1.306 9.027 9.027 0 01-1.306-1.652m0 0l4.138-3.448M4.33 16.712a9.014 9.014 0 010-9.424m4.138 5.976a3.765 3.765 0 010-2.528m0 0c.181-.506.475-.982.88-1.388a3.736 3.736 0 011.388-.88m-2.268 2.268L4.33 7.288m6.406 1.18L7.288 4.33m0 0a9.024 9.024 0 00-1.652 1.306A9.025 9.025 0 004.33 7.288"
-              />
-            </svg>
-            <span className="text-xs font-bold text-pink-500">
+            <svg viewBox="0 0 120 120" id="Layer_1" className="h-12 w-12" version="1.1" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <style type="text/css" dangerouslySetInnerHTML={{__html: " .st0{fill:#f500a7;} .st1{fill:#3F3F3F;} .st2{fill:#F87474;} .st3{fill:#3AB0FF;} .st4{fill:#FFFFFF;} " }} /> <g> <g> <ellipse className="st0" cx="18.6" cy="64.9" rx="6.6" ry="6.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -40.471 32.1518)" /> <ellipse className="st0" cx="101.4" cy="64.9" rx="6.6" ry="6.6" transform="matrix(0.9732 -0.2298 0.2298 0.9732 -12.2044 25.0397)" /> </g> <g> <path className="st0" d="M96.4,52.8h-5.6C90.8,35.8,77,22,60,22c-17,0-30.8,13.8-30.8,30.8h-5.6c0-20.1,16.3-36.4,36.4-36.4 S96.4,32.7,96.4,52.8z" /> </g> <g> <path className="st1" d="M69.3,101.4c-2.4,0-4-0.1-4.2-0.1l0.2-2.2c0.2,0,22.9,1.7,25.6-7.7c3-10.4,1.5-21.4,1.5-21.5l2.2-0.3 C94.7,70,96.2,81.1,93,92C90.5,100.3,76.5,101.4,69.3,101.4z" /> </g> <path className="st2" d="M70.3,103.6H60.2c-0.9,0-1.6-0.7-1.6-1.6v-4c0-0.9,0.7-1.6,1.6-1.6h10.1c0.9,0,1.6,0.7,1.6,1.6v4 C71.9,102.9,71.2,103.6,70.3,103.6z" /> <path className="st3" d="M77.1,72.6H60l-12.4,7.4c-0.5,0.3-1.1-0.2-1-0.7l1.8-6.7h-5.5c-1.5,0-2.8-1.3-2.8-2.8V48.4 c0-1.5,1.3-2.8,2.8-2.8h34.1c1.5,0,2.8,1.3,2.8,2.8v21.5C79.9,71.4,78.6,72.6,77.1,72.6z" /> <g> <path className="st4" d="M60,57c-1.2,0-2.1,1-2.1,2.1s1,2.1,2.1,2.1c1.2,0,2.1-1,2.1-2.1S61.2,57,60,57z" /> <path className="st4" d="M51.4,57c-1.2,0-2.1,1-2.1,2.1s1,2.1,2.1,2.1c1.2,0,2.1-1,2.1-2.1S52.6,57,51.4,57z" /> <path className="st4" d="M68.6,57c-1.2,0-2.1,1-2.1,2.1s1,2.1,2.1,2.1c1.2,0,2.1-1,2.1-2.1S69.8,57,68.6,57z" /> </g> <g> <path className="st2" d="M29.6,50.9h-8.8c-2.7,0-4.9,2.2-4.9,4.9v19.6c0,2.7,2.2,4.9,4.9,4.9h8.8c1.9,0,3.4-1.5,3.4-3.4V54.2 C32.9,52.4,31.4,50.9,29.6,50.9z" /> <path className="st2" d="M99.2,50.9h-8.8c-1.9,0-3.4,1.5-3.4,3.4v22.6c0,1.9,1.5,3.4,3.4,3.4h8.8c2.7,0,4.9-2.2,4.9-4.9V55.7 C104.1,53,101.9,50.9,99.2,50.9z" /> </g> </g> </g></svg>
+          </div>
+          <span className="text-xs font-bold text-white">
               Help & Support
             </span>
-          </div>
         </Link>
-        <Link href="/">
+        <Link href="/" className="flex flex-col justify-center items-center gap-2">
           <div
-            className="bg-white rounded-md flex flex-col items-center justify-center"
+            className="bg-pink-100 rounded-md flex flex-col items-center justify-center"
             style={{ height: "80px", width: "100px" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-pink-500 mb-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"
-              />
-            </svg>
-            <span className="text-xs font-bold text-pink-500">
+            <svg viewBox="-0.5 0 32 32" className="h-8 w-8" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M24.7273 1.45455H10.1818C6.96852 1.45455 4.36364 4.05943 4.36364 7.27273V24.7273C4.36364 27.9406 6.96852 30.5455 10.1818 30.5455H24.7273C27.9406 30.5455 30.5455 27.9406 30.5455 24.7273V7.27273C30.5455 4.05943 27.9406 1.45455 24.7273 1.45455Z" fill="#5FC424" /> <path d="M21.8182 0H5.81818C2.60489 0 0 2.60489 0 5.81818V26.1818C0 29.3951 2.60489 32 5.81818 32H21.8182C25.0315 32 27.6364 29.3951 27.6364 26.1818V5.81818C27.6364 2.60489 25.0315 0 21.8182 0Z" fill="url(#paint0_linear_103_1782)" /> <path d="M4.36364 17.4545L8 15.2727L11.6364 17.4545V6.54545C11.6364 5.34047 10.6595 4.36364 9.45454 4.36364H6.54545C5.34047 4.36364 4.36364 5.34047 4.36364 6.54545V17.4545Z" fill="white" fillOpacity="0.6" /> <defs> <linearGradient id="paint0_linear_103_1782" x1="15.2727" y1={0} x2="15.2727" y2={32} gradientUnits="userSpaceOnUse"> <stop stopColor="#A2E458" /> <stop offset={1} stopColor="#50CD06" /> </linearGradient> </defs> </g></svg>
+          </div>
+          <span className="text-xs font-bold text-white">
               Terms of Use
             </span>
-          </div>
         </Link>
-        <Link href="/">
+        <Link href="/" className="flex flex-col justify-center items-center gap-2">
           <div
-            className="bg-white rounded-md flex flex-col items-center justify-center"
+            className="bg-pink-100 rounded-md flex flex-col items-center justify-center"
             style={{ height: "80px", width: "100px" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-pink-500 mb-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
-              />
-            </svg>
-            <span className="text-xs font-bold text-pink-500">Languages</span>
+            <svg className="h-8 w-8" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xmlSpace="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path style={{fill: '#B8C9D9'}} d="M461.909,133.563H320.778c-4.986,0-9.706,2.226-12.878,6.077c-3.172,3.84-4.452,8.904-3.506,13.79 l37.108,191.607H190.331c-5.009,0-9.739,2.237-12.922,6.111c-3.172,3.862-4.43,8.96-3.45,13.857l26.713,133.563 c1.625,8.114,8.515,13.111,15.772,13.423h245.466c27.614,0,50.086-22.472,50.086-50.086V183.649 C511.995,156.035,489.523,133.563,461.909,133.563z" /> <path style={{fill: '#E6F3FF'}} d="M461.909,283.821h-50.086v-16.695c0-9.22-7.475-16.695-16.695-16.695 c-9.22,0-16.695,7.475-16.695,16.695v16.695h-50.086c-9.22,0-16.695,7.475-16.695,16.695s7.475,16.695,16.695,16.695h17.982 c3.195,19.862,12.261,34.916,25.553,50.151c-7.137,6.956-14.031,13.602-21.95,21.521c-6.52,6.519-6.52,17.09,0,23.611 c6.519,6.52,17.091,6.52,23.611,0c7.794-7.793,14.674-14.425,21.586-21.163c6.902,6.729,13.789,13.368,21.586,21.163 c6.519,6.52,17.09,6.521,23.611,0c6.52-6.52,6.52-17.091,0-23.611c-7.914-7.914-14.802-14.555-21.95-21.521 c13.293-15.234,22.357-30.288,25.553-50.151h17.982c9.22,0,16.695-7.475,16.695-16.695S471.129,283.821,461.909,283.821z M395.128,343.229c-7.323-8.736-12.152-16.753-14.652-26.017h29.303C407.279,326.476,402.449,334.494,395.128,343.229z" /> <path style={{fill: '#2860CC'}} d="M377.286,355.656c-2.504-6.4-8.682-10.618-15.549-10.618H190.331c-5.009,0-9.739,2.237-12.922,6.111 c-3.172,3.862-4.43,8.96-3.45,13.857l26.713,133.563c1.625,8.114,8.515,13.111,15.772,13.423c0.479,0.011,0.957,0.011,1.436,0 c3.706-0.167,7.413-1.581,10.496-4.419l144.693-133.563C378.121,369.346,379.79,362.056,377.286,355.656z" /> <path style={{fill: '#167EE6'}} d="M361.737,378.428H50.09c-27.619,0-50.086-22.467-50.086-50.086V50.086C0.004,22.468,22.472,0,50.09,0 h244.865c8,0,14.869,5.674,16.391,13.521l66.781,345.037c0.946,4.892-0.337,9.956-3.51,13.794 C371.443,376.2,366.726,378.428,361.737,378.428z" /> <path style={{fill: '#E6F3FF'}} d="M166.958,255.996c-36.814,0-66.781-29.967-66.781-66.781s29.967-66.781,66.781-66.781 c9.032,0,17.804,1.793,26.021,5.282c8.478,3.62,12.424,13.434,8.804,21.913c-3.62,8.446-13.402,12.424-21.913,8.804 c-4.044-1.729-8.413-2.609-12.913-2.609c-18.424,0-33.391,14.967-33.391,33.391s14.967,33.391,33.391,33.391 c12.326,0,23.119-6.717,28.923-16.695h-12.228c-9.228,0-16.695-7.467-16.695-16.695c0-9.228,7.467-16.695,16.695-16.695h33.391 c9.228,0,16.695,7.467,16.695,16.695C233.739,226.028,203.772,255.996,166.958,255.996z" /> </g></svg>
           </div>
+          <span className="text-xs font-bold text-white">Languages</span>
         </Link>
-        <Link href="/blocked-list">
+        <Link href="/blocked-list" className="flex flex-col justify-center items-center gap-2">
           <div
-            className="bg-white rounded-md flex flex-col items-center justify-center"
+            className="bg-pink-100 rounded-md flex flex-col items-center justify-center"
             style={{ height: "80px", width: "100px" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-pink-500 mb-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
-              />
-            </svg>
-            <span className="text-xs font-bold text-pink-500">
+            <svg viewBox="0 0 24 24" className="h-9 w-9" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <g transform="translate(0 -1028.4)"> <path d="m12 1031.4c-2.2482 0-4.3298 0.7-6 2-2.4327 1.8-4 4.7-4 8 0 5.5 4.4772 10 10 10 5.523 0 10-4.5 10-10 0-5.6-4.477-10-10-10zm0 3c3.866 0 7 3.1 7 7 0 1.4-0.426 2.7-1.156 3.8l-9.6878-9.7c1.1055-0.7 2.4198-1.1 3.8438-1.1zm-5.9375 3.3 9.6255 9.6c-1.073 0.7-2.331 1.1-3.688 1.1-3.866 0-7-3.2-7-7 0-1.4 0.3937-2.7 1.0625-3.7z" fill="#c0392b" /> <path d="m12 2c-2.2482 0-4.3298 0.7477-6 2-2.4327 1.8241-4 4.7254-4 8 0 5.523 4.4772 10 10 10 5.523 0 10-4.477 10-10 0-5.5228-4.477-10-10-10zm0 3c3.866 0 7 3.134 7 7 0 1.424-0.426 2.738-1.156 3.844l-9.6878-9.6878c1.1055-0.7305 2.4198-1.1562 3.8438-1.1562zm-5.9375 3.3125l9.6255 9.6255c-1.073 0.668-2.331 1.062-3.688 1.062-3.866 0-7-3.134-7-7 0-1.357 0.3937-2.6145 1.0625-3.6875z" transform="translate(0 1028.4)" fill="#e74c3c" /> </g> </g></svg>
+          </div>
+          <span className="text-xs font-bold text-white">
               Blocked Users
-            </span>
-          </div>
+          </span>
         </Link>
-        <Link href="/favorites">
+        <Link href="/favorites" className="flex flex-col justify-center items-center gap-2">
           <div
-            className="bg-white rounded-md flex flex-col items-center justify-center"
+            className="bg-pink-100 rounded-md flex flex-col items-center justify-center"
             style={{ height: "80px", width: "100px" }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 text-pink-500 mb-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-              />
-            </svg>
-            <span className="text-xs font-bold text-pink-500">
-              List Favorites
-            </span>
+            <svg viewBox="0 0 24 24" className="h-10 w-10" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M16.1315 3.71436C14.4172 3.71436 12.9029 4.57721 12 5.8915C11.0972 4.57721 9.58289 3.71436 7.86861 3.71436C5.10289 3.71436 2.85718 5.96007 2.85718 8.72578C2.85718 14.8344 12 20.3258 12 20.3258C12 20.3258 21.1429 14.8344 21.1429 8.72578C21.1429 5.96007 18.8972 3.71436 16.1315 3.71436Z" fill="url(#paint0_radial)" /> <path opacity="0.5" d="M18.2056 4.16016C20.9485 8.53158 18.4228 14.2687 15.3885 15.8973C12.0399 17.6973 9.74847 16.8516 5.00562 14.1602C7.70847 17.743 11.9999 20.3202 11.9999 20.3202C11.9999 20.3202 21.1428 14.8287 21.1428 8.72016C21.1428 6.6973 19.937 4.94873 18.2056 4.16016Z" fill="url(#paint1_radial)" /> <path opacity="0.5" d="M16.1315 3.71436C14.4172 3.71436 12.9029 4.57721 12 5.8915C11.0972 4.57721 9.58289 3.71436 7.86861 3.71436C5.10289 3.71436 2.85718 5.96007 2.85718 8.72578C2.85718 14.8344 12 20.3258 12 20.3258C12 20.3258 21.1429 14.8344 21.1429 8.72578C21.1429 5.96007 18.8972 3.71436 16.1315 3.71436Z" fill="url(#paint2_radial)" /> <path opacity="0.5" d="M16.1315 3.71436C14.4172 3.71436 12.9029 4.57721 12 5.8915C11.0972 4.57721 9.58289 3.71436 7.86861 3.71436C5.10289 3.71436 2.85718 5.96007 2.85718 8.72578C2.85718 14.8344 12 20.3258 12 20.3258C12 20.3258 21.1429 14.8344 21.1429 8.72578C21.1429 5.96007 18.8972 3.71436 16.1315 3.71436Z" fill="url(#paint3_radial)" /> <path opacity="0.24" d="M10.7486 5.74883C11.2514 6.93169 10.1371 8.5374 8.25714 9.33169C6.37714 10.126 4.45143 9.8174 3.94857 8.64026C3.44571 7.46312 4.56 5.85169 6.44 5.0574C8.32 4.26312 10.2457 4.56597 10.7486 5.74883Z" fill="url(#paint4_radial)" /> <path opacity="0.24" d="M16.8742 4.78885C17.5885 5.57742 17.1485 7.13742 15.8971 8.26885C14.6456 9.40028 13.0513 9.68028 12.3371 8.8917C11.6228 8.10313 12.0628 6.54313 13.3142 5.41171C14.5656 4.28028 16.1599 4.00028 16.8742 4.78885Z" fill="url(#paint5_radial)" /> <path opacity="0.32" d="M16.2229 5.04578C18.7372 5.90293 21.1372 9.61721 17.0801 14.2458C14.6515 17.0172 12.0001 18.4172 8.62866 17.8686C10.4515 19.3886 12.0058 20.3258 12.0058 20.3258C12.0058 20.3258 21.1487 14.8344 21.1487 8.72578C21.1429 5.96007 18.8972 3.71436 16.1315 3.71436C14.4172 3.71436 12.9029 4.57721 12.0001 5.8915C12.0001 5.8915 14.3829 4.41721 16.2229 5.04578Z" fill="url(#paint6_linear)" /> <defs> <radialGradient id="paint0_radial" cx={0} cy={0} r={1} gradientUnits="userSpaceOnUse" gradientTransform="translate(9.38479 8.34769) rotate(-29.408) scale(14.3064 11.3486)"> <stop offset="0.2479" stopColor="#FF0000" /> <stop offset="0.8639" stopColor="#C20000" /> </radialGradient> <radialGradient id="paint1_radial" cx={0} cy={0} r={1} gradientUnits="userSpaceOnUse" gradientTransform="translate(9.7385 7.47018) rotate(-29.408) scale(12.3173 9.77078)"> <stop offset="0.2479" stopColor="#FF0000" /> <stop offset={1} stopColor="#C20000" /> </radialGradient> <radialGradient id="paint2_radial" cx={0} cy={0} r={1} gradientUnits="userSpaceOnUse" gradientTransform="translate(9.38479 8.34769) rotate(-29.408) scale(14.3064 11.3486)"> <stop stopColor="white" stopOpacity="0.25" /> <stop offset={1} stopColor="white" stopOpacity={0} /> </radialGradient> <radialGradient id="paint3_radial" cx={0} cy={0} r={1} gradientUnits="userSpaceOnUse" gradientTransform="translate(14.5277 13.2044) rotate(-26.296) scale(10.4431 5.16038)"> <stop stopColor="#BD2719" stopOpacity="0.25" /> <stop offset={1} stopColor="#BD2719" stopOpacity={0} /> </radialGradient> <radialGradient id="paint4_radial" cx={0} cy={0} r={1} gradientUnits="userSpaceOnUse" gradientTransform="translate(7.34746 7.19453) rotate(-21.6908) scale(3.71252 2.30616)"> <stop stopColor="white" /> <stop offset={1} stopColor="white" stopOpacity={0} /> </radialGradient> <radialGradient id="paint5_radial" cx={0} cy={0} r={1} gradientUnits="userSpaceOnUse" gradientTransform="translate(14.6004 6.84619) rotate(-40.7634) scale(3.07376 1.9095)"> <stop stopColor="white" /> <stop offset={1} stopColor="white" stopOpacity={0} /> </radialGradient> <linearGradient id="paint6_linear" x1="13.8868" y1="26.8498" x2="15.6583" y2="2.96408" gradientUnits="userSpaceOnUse"> <stop stopColor="#860805" /> <stop offset={1} stopColor="#BD2719" stopOpacity={0} /> </linearGradient> </defs> </g></svg>
           </div>
+          <span className="text-xs text-center font-bold text-white">
+            List Favorites
+          </span>
         </Link>
       </div>
     </>

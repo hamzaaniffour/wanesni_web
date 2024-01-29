@@ -1,9 +1,24 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import UserInformations from "./UserInformations";
 import Cards from "../Rooms/Cards";
+import directus from "@/app/api/directus/clients";
 
 const SwiperCards = () => {
+
+  const [token, setToken] = useState<string | null>(null);
+  useEffect(() => {
+    async function fetchToken() {
+      try {
+        const token = await directus.getToken();
+        setToken(token);
+      } catch (error) {
+        console.error("Error fetching token:", error);
+      }
+    }
+    fetchToken();
+  }, []);
+
   return (
     <div>
       <div className="flex justify-between block xl:hidden">
@@ -60,22 +75,69 @@ const SwiperCards = () => {
           </div>
         </div>
         <div className="rounded-full">
-        <details className="dropdown py-1">
-          <summary className="mb-0.5 btn text-pink-500 rounded-md py-1 !min-h-[2.5rem] h-[2.5rem]">
-            Select Gender <svg fill="#ec4899" className="w-4 h-4 -ml-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" enableBackground="new 0 0 52 52" xmlSpace="preserve"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <path d="M8.3,14h35.4c1,0,1.7,1.3,0.9,2.2L27.3,37.4c-0.6,0.8-1.9,0.8-2.5,0L7.3,16.2C6.6,15.3,7.2,14,8.3,14z" /> </g></svg>
-          </summary>
-          <ul className="p-2 shadow menu dropdown-content  bg-base-100 rounded-md w-[153px] z-[9] py-2">
-            <li className="inline-block"><div className="float-left mr-1 pl-[5px] font-medium text-black"></div> <img src="/assets/coin.png" className="w-[20px] float-left px-0 mr-1" alt="" /> <span className="px-0 font-bold text-black">9</span></li>
-            <li className="inline-block"><div className="float-left mr-1 pl-[5px] font-medium text-black"></div> <img src="/assets/coin.png" className="w-[20px] float-left px-0 mr-1" alt="" /> <span className="px-0 font-bold text-black">5</span></li>
-            <li className="inline-block"><div className="float-left mr-1 pl-[5px] font-medium text-black"></div> <img src="/assets/coin.png" className="w-[20px] float-left px-0 mr-1" alt="" /> <span className="px-0 font-bold text-black">Free</span></li>
-          </ul>
-        </details>
+          <details className="dropdown py-1">
+            <summary className="mb-0.5 btn text-pink-500 rounded-md py-1 !min-h-[2.5rem] h-[2.5rem]">
+              Select Gender{" "}
+              <svg
+                fill="#ec4899"
+                className="w-4 h-4 -ml-0.5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+                enableBackground="new 0 0 52 52"
+                xmlSpace="preserve"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path d="M8.3,14h35.4c1,0,1.7,1.3,0.9,2.2L27.3,37.4c-0.6,0.8-1.9,0.8-2.5,0L7.3,16.2C6.6,15.3,7.2,14,8.3,14z" />{" "}
+                </g>
+              </svg>
+            </summary>
+            <ul className="p-2 shadow menu dropdown-content bg-base-100 rounded-md w-[153px] z-[9] py-2 flex justify-center items-center gap-y-3">
+              <li className="inline-block w-full">
+                      <span className="float-left p-0 mr-1 !h-6 !w-6 bg-cover bg-center rounded-full" style={{backgroundImage: 'url("/avatars/men.png")'}}></span>
+                      <span className="p-0 float-left mr-4 font-medium text-black relative top-[2px] text-sm">Male</span>
+                      <span className="float-left p-0 mr-1 rounded-none !h-5 !w-5 bg-cover bg-center" style={{backgroundImage: 'url("/assets/coin.png")'}}></span>
+                      <span className="float-left p-0 mr-1 text-black font-bold">5</span>
+              </li>
+              <li className="inline-block w-full">
+                      <span className="float-left p-0 mr-1 !h-6 !w-6 bg-cover bg-center rounded-full" style={{backgroundImage: 'url("/avatars/women.png")'}}></span>
+                      <span className="p-0 float-left mr-4 font-medium text-black relative top-[2px] text-sm">Female</span>
+                      <span className="float-left p-0 mr-1 rounded-none !h-5 !w-5 bg-cover bg-center" style={{backgroundImage: 'url("/assets/coin.png")'}}></span>
+                      <span className="float-left p-0 mr-1 text-black font-bold">9</span>
+              </li>
+              <li className="inline-block w-full">
+                      <span className="float-left p-0">
+                      <div className="avatar-group -space-x-4 rtl:space-x-reverse mt-[-4px]">
+                        <div className="avatar">
+                          <div className="w-6">
+                            <img src="/avatars/men.png" />
+                          </div>
+                        </div>
+                        <div className="avatar">
+                          <div className="w-6">
+                            <img src="/avatars/women.png" />
+                          </div>
+                        </div>
+                        </div>
+                      </span>
+                      <span className="p-0 float-left mr-4 font-medium text-black relative top-[2px] text-sm">Both</span>
+                      <span className="float-left p-0 mr-1 rounded-none !h-5 !w-5 bg-cover bg-center" style={{backgroundImage: 'url("/assets/coin.png")'}}></span>
+                      <span className="float-left p-0 mr-1 text-black font-bold">0</span>
+              </li>
+            </ul>
+          </details>
         </div>
       </div>
 
       {/* Button Menu */}
       <div className="absolute bottom-0 right-0 left-0 z-50 flex justify-center items-center mx-auto block xl:hidden">
-        <ul className="menu bg-white menu-horizontal rounded-none w-full flex justify-center items-center">
+        <ul className="menu bg-white menu-horizontal rounded-none w-full flex justify-between items-center">
           <li>
             <Link href="/account" className="font-bold uppercase text-xs">
               <svg

@@ -1,11 +1,72 @@
 // Chatters.tsx
-import React from "react";
+import directus from "@/app/api/directus/clients";
+import { readItem, readItems, readMe } from "@directus/sdk";
+import React, { useEffect, useState } from "react";
 
 interface ChattersProps {
   onMessageClick: () => void;
 }
 
 const Chatters: React.FC<ChattersProps> = ({ onMessageClick }) => {
+
+  const [mydata, setMYdata] = useState<number | null>(null);
+  const [chatters, setChatters] = useState<number | null>(null);
+
+  useEffect(() => {
+    const fetchMe = async () => {
+      const data = await directus.request(
+        readMe()
+      );
+      const userCoins = data.coins;
+      setMYdata(userCoins);
+    };
+    fetchMe();
+  }, []);
+
+  useEffect(() => {
+    const getChatters = async () => {
+      try {
+        if (mydata) {
+          const result = await directus.request(
+            readItems("chats", {
+              fields: [
+                "content",
+                "isread",
+                "date_created",
+                "user_created.id",
+                "user_created.avatar",
+                "user_created.first_name",
+                "user_created.last_name",
+                "receiver_id.id",
+                "receiver_id.avatar",
+                "receiver_id.first_name",
+                "receiver_id.last_name"
+              ],
+              filter: {
+                _or: [
+                  {
+                    "user_created": {
+                      _eq: mydata
+                    }
+                  },
+                  {
+                    "receiver_id": {
+                      _eq: mydata
+                    }
+                  }
+                ]
+              }
+            })
+          );
+          console.log(result)
+        }
+      } catch (error) {
+        console.log("error");
+      }
+    };
+    getChatters();
+  }, [mydata]);
+
   return (
     <div>
       {/* <button onClick={onMessageClick}>Send Message</button> */}
@@ -89,81 +150,6 @@ const Chatters: React.FC<ChattersProps> = ({ onMessageClick }) => {
                 </div>
               </button>
               {/* User */}
-              <button className="w-full text-left py-2 focus:outline-none focus-visible:bg-indigo-50">
-                <div className="flex items-center">
-                  <img
-                    className="rounded-full items-start flex-shrink-0 mr-3"
-                    src="https://res.cloudinary.com/dc6deairt/image/upload/v1638102932/user-32-02_vll8uv.jpg"
-                    width={32}
-                    height={32}
-                    alt="Nhu Cassel"
-                  />
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-900">
-                      Nhu Cassel
-                    </h4>
-                    <div className="text-[13px]">Hello Lauren 👋, · 24 Mar</div>
-                  </div>
-                </div>
-              </button>
-              {/* User */}
-              <button className="w-full text-left py-2 focus:outline-none focus-visible:bg-indigo-50">
-                <div className="flex items-center">
-                  <img
-                    className="rounded-full items-start flex-shrink-0 mr-3"
-                    src="https://res.cloudinary.com/dc6deairt/image/upload/v1638102932/user-32-03_uzwykl.jpg"
-                    width={32}
-                    height={32}
-                    alt="Patrick Friedman"
-                  />
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-900">
-                      Patrick Friedman
-                    </h4>
-                    <div className="text-[13px]">
-                      Yes, you&lsquo;re right but… · 14 Mar
-                    </div>
-                  </div>
-                </div>
-              </button>
-              {/* User */}
-              <button className="w-full text-left py-2 focus:outline-none focus-visible:bg-indigo-50">
-                <div className="flex items-center">
-                  <img
-                    className="rounded-full items-start flex-shrink-0 mr-3"
-                    src="https://res.cloudinary.com/dc6deairt/image/upload/v1638102932/user-32-04_ttlftd.jpg"
-                    width={32}
-                    height={32}
-                    alt="Byrne McKenzie"
-                  />
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-900">
-                      Byrne McKenzie
-                    </h4>
-                    <div className="text-[13px]">
-                      Hey Lauren ✨, first of all… · 14 Mar
-                    </div>
-                  </div>
-                </div>
-              </button>
-              {/* User */}
-              <button className="w-full text-left py-2 focus:outline-none focus-visible:bg-indigo-50">
-                <div className="flex items-center">
-                  <img
-                    className="rounded-full items-start flex-shrink-0 mr-3"
-                    src="https://res.cloudinary.com/dc6deairt/image/upload/v1638102932/user-32-05_bktgmb.jpg"
-                    width={32}
-                    height={32}
-                    alt="Scott Micheal"
-                  />
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-900">
-                      Scott Micheal
-                    </h4>
-                    <div className="text-[13px]">No way 🤙! · 11 Mar</div>
-                  </div>
-                </div>
-              </button>
             </div>
           </div>
           {/* Bottom right button */}

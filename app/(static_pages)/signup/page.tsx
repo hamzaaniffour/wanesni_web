@@ -17,7 +17,7 @@ const Signup = () => {
         ></div>
       </div>
       <div className="lg:w-4/12 flex items-center justify-center">
-        <div className="w-full h-full flex flex-col justify-center bg-white py-10 px-10">
+        <div className="w-full h-full flex flex-col justify-center bg-pink-50 py-10 px-10">
           <div>
             <Link href="/">
               <div
@@ -31,10 +31,9 @@ const Signup = () => {
             </Link>
           </div>
 
-          <h2 className="text-black text-2xl font-bold text-center mb-8">
-            Create an account
-          </h2>
-          <p className="text-gray-500 font-medium text-sm text-center flex mx-auto max-w-[300px] mb-6">
+          <h2 className="text-black text-2xl font-bold text-center -mb-[13px] relative">Sign Up</h2>
+          <div className="h-4 w-28 bg-pink-500 mx-auto mb-2"></div>
+          <p className="text-gray-500 font-medium text-sm text-center flex mx-auto max-w-[300px] mb-8">
             Sign Up, To discover our world So many matches, waiting for you.
           </p>
 
