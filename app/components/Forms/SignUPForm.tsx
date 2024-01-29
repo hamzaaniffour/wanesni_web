@@ -3,6 +3,7 @@ import { createUser, uploadFiles } from "@directus/sdk";
 import React, {
   ChangeEvent,
   FormEvent,
+  useEffect,
   useRef,
   useState,
 } from "react";
@@ -59,9 +60,7 @@ const SignUPForm = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [randomCode, setRandomCode] = useState("");
   const [codeParts, setCodeParts] = useState(["", "", "", "", "", ""]);
-  const codeRefs = Array.from({ length: 6 }, () =>
-    useRef<HTMLInputElement>(null)
-  );
+  const codeRefs = Array.from({ length }, () => useRef<HTMLInputElement>(null));
   const [showPopup, setShowPopup] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
@@ -72,6 +71,10 @@ const SignUPForm = () => {
     setRandomCode(code);
     return code;
   };
+
+  useEffect(() => {
+    codeRefs[0]?.current?.focus();
+  })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({

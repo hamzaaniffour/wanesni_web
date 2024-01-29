@@ -96,7 +96,7 @@ const FavoritesList = () => {
             {loading ? (
               <>Load...</>
             ) : favorites.length === 0 ? (
-              <div className="text-gray-400 font-normal text-center flex mx-auto max-w-[220px] text-sm">There's no one in your favorites list right now.</div>
+              <div className="text-gray-400 font-normal text-center flex mx-auto max-w-[220px] text-sm">There&lsquo;s no one in your favorites list right now.</div>
             ) : (
               <ul role="list" className="divide-y">
                 {favorites.map((favorite: any, index: any) => (
